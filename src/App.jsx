@@ -7,11 +7,9 @@ function App() {
 
   const [groceryList, setGroceryList] = useState(["Äpplen","Smör"])
 
+  // Vi skapar en funktion som vi skickar som en prop till AddItem-komponenten
   const addToList = (item) => {
-
-    console.log("Lägg till i listan");
-
-    //Lägg till item i groceryList-state
+    
 
     //Skapa en kopia utav groceryList
     let updatedList = [...groceryList]
@@ -19,6 +17,9 @@ function App() {
     updatedList.push(item)
     //Ersätt nuvarande state med kopia
     setGroceryList(updatedList)
+
+    //Alternativ 2 - Gör allting på en kodrad - Vi går igenom nästa lektion
+    // setGroceryList([...groceryList, item])
   }
 
   return (
