@@ -9,10 +9,11 @@ const Profile = ({data}) => {
 
     return(<li className="profile">
         <button onClick={() => {setShow(!show)}}>
-            {/*  W ? T : F */}
+            {/*  What ? True : False */}
             {show === true ? 'Show less' : 'Show more'}
             </button>
             <p><strong>Förnamn: </strong>{fornamn}</p>
+            {/* Om show är true, visa ut koden efter && */}
             { show && <>
                     <p><strong>Efternamn: </strong>{efternamn}</p>
                     <p><strong>Ålder: </strong>{alder}</p>
