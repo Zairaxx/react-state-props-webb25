@@ -53,14 +53,6 @@ function App() {
   return (
     <>
     <h1>React state & Props - Webb25 - Antal personer: {personer.length}</h1>
-    {/* <button onClick={() => {
-      setPersoner([...personer, {
-      fornamn: "Hanna",
-      efternamn: "Andersson",
-      alder: 22,
-      hobby: "Spela TV-spel"
-  }])
-    }}>Lägg till person</button> */}
     <ul>
       {personer.map(person => <Profile data={person}/>)}
     </ul>
