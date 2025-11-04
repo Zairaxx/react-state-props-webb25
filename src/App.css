@@ -41,14 +41,3 @@
   color: #888;
 }
 
-ul {
-  display:flex;
-  width:100%;
-  justify-content: space-evenly;
-  list-style: none;
-  flex-wrap:wrap;
-}
-.profile {
-  border:2px solid white;
-  width:175px;
-}
