@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Profile from './components/Profile'
-
+import AddProfile from './components/AddProfile'
 function App() {
 
 
@@ -35,26 +35,20 @@ function App() {
       efternamn: "Andersson",
       alder: 22,
       hobby: "Läsa"
-    },
-  {
-      fornamn: "Hanna",
-      efternamn: "Andersson",
-      alder: 22,
-      hobby: "Spela TV-spel"
-  },
-{
-      fornamn: "Hanna",
-      efternamn: "Andersson",
-      alder: 22,
-      hobby: "Spela TV-spel"
-  }])
+    }])
 
+  const addPerson = (newPerson) => {
+    //Lägg till x i personer-statet
+    setPersoner([...personer, newPerson])
+    // setPersoner(x)
+  }
 
   return (
     <>
     <h1>React state & Props - Webb25 - Antal personer: {personer.length}</h1>
+    <AddProfile addPerson={addPerson}/>
     <ul>
-      {personer.map(person => <Profile data={person}/>)}
+      {personer.map((person,i) => <Profile key={i} data={person}/>)}
     </ul>
     </>
   )

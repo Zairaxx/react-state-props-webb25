@@ -8,9 +8,9 @@ const Profile = ({data}) => {
     let {fornamn,efternamn,alder,hobby} = data;
 
     return(<li className="profile">
-        <button onClick={() => {setShow(!show)}}>
+        <button onClick={ () => {setShow(!show) }}>
             {/*  What ? True : False */}
-            {show === true ? 'Show less' : 'Show more'}
+            {show ? 'Show less' : 'Show more'}
             </button>
             <p><strong>Förnamn: </strong>{fornamn}</p>
             {/* Om show är true, visa ut koden efter && */}
